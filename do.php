@@ -1,3 +1,4 @@
+<?php
 
  $url = "http://preev.com/pulse/units:btc+eur/sources:kraken";		
  $c = curl_init();
@@ -9,3 +10,5 @@
  $obj = json_decode($data);
  $ret = $obj->{'btc'}->{'eur'}->{'kraken'}->{'last'};
  echo round(floatval($ret));
+
+?>
